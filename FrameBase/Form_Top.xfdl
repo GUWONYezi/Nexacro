@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Top" width="1280" height="50" titletext="Form_Top">
+    <Layouts>
+      <Layout width="1280" height="50" screenid="Desktop_screen">
+        <ImageViewer id="ImageViewer00" taborder="0" left="0" top="0" width="244" height="50" image="url('theme::default/images/img_WF_Nexacro.png')"/>
+        <Menu id="Menu00" taborder="1" left="240" top="0" width="1040" height="50" levelcolumn="MENU_LEVEL" innerdataset="gds_menu" captioncolumn="MENU_NAME" idcolumn="MENU_ID" onmenuclick="Menu00_onmenuclick"/>
+      </Layout>
+      <Layout name="Desktop_screen_MDI" width="1280" height="50" screenid=""/>
+      <Layout name="Desktop_screen_MDI2" width="1280" height="50" screenid="Desktop_screen_MDI2"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Menu00_onmenuclick = function(obj:nexacro.Menu,e:nexacro.MenuClickEventInfo)
+{
+	var objApp=nexacro.getApplication();
+	var strID=e.id;
+	var strURL=objApp.gds_menu.lookup("MENU_ID",strID,"FORM_URL");
+	
+	objApp.mainframe.VFrameSet00.HFrameSet00.LeftFrame.form.fn_openForm(objApp,strID,strURL);
+};
+]]></Script>
+  </Form>
+</FDL>

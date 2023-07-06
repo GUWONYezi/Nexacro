@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Position" width="600" height="300" titletext="New Form">
+    <Layouts>
+      <Layout height="300" width="600">
+        <Button id="Button00" taborder="0" text="Left Top" left="10" top="10" width="100" height="30"/>
+        <Button id="Button00_00" taborder="1" text="Right Top" top="10" width="100" height="30" right="10"/>
+        <Button id="Button00_01" taborder="2" text="Left Bottom" left="10" width="100" height="30" bottom="10"/>
+        <Button id="Button00_01_00" taborder="3" text="Right Bottom" width="100" height="30" bottom="10" right="10"/>
+        <Button id="Button00_01_00_00" taborder="4" text="Left Top Right Bottom" bottom="50" right="10" left="10" top="50"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Button" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Button id="Button00" taborder="1" text="Basic Usage" left="28" top="32" width="120" height="50"/>
+        <Button id="Button00_00" taborder="2" text=" icon button" left="29" top="120" width="120" height="50" icon="url('theme::default/images/btn_WF_Popmenunext_D.png')"/>
+        <Button id="Button00_01" left="28" top="210" width="120" height="50" onclick="Button00_01_onclick" background="url('theme::default/images/btn_WF_Popmenunext_D.png') no-repeat center center"/>
+        <Button id="Button01" taborder="3" text="Button01" left="200" top="32" width="200" height="25" expr="expr:&quot;Current time:&quot;+comp.parent.fn_getTime()"/>
+        <Button id="Button02" taborder="4" text="Sun" left="200" top="120" width="44" height="32" onclick="Button_onclick"/>
+        <Button id="Button02_00" taborder="5" text="Mon" left="Button02:5" top="119" width="44" height="32" onclick="Button_onclick"/>
+        <Button id="Button02_00_00" taborder="6" text="Tue" left="Button02_00:5" top="119" width="44" height="32" onclick="Button_onclick"/>
+        <Button id="Button02_00_00_00" taborder="7" text="Wed" left="Button02_00_00:5" top="119" width="44" height="32" onclick="Button_onclick"/>
+        <Button id="Button02_00_00_00_00" taborder="8" text="Thu" left="Button02_00_00_00:5" top="119" width="44" height="32" onclick="Button_onclick"/>
+        <Button id="Button02_00_00_00_00_00" taborder="9" text="Fri" left="Button02_00_00_00_00:5" top="119" width="44" height="32" onclick="Button_onclick"/>
+        <Button id="Button02_00_00_00_00_00_00" taborder="10" text="Sat" left="Button02_00_00_00_00_00:5" top="119" width="44" height="32" onclick="Button_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.fn_getTime=function()
+{
+	var objDate=new Date();
+	var sTime=objDate.getHours().toString().padLeft(2,"0")+":"; //padLeft(2,"0") => 글자수:두자리, 없는 자리는 0으로 채우기
+	sTime+=objDate.getMinutes().toString().padLeft(2,"0")+":";
+	sTime+=objDate.getSeconds().toString().padLeft(2,"0");
+	
+	return sTime;
+}
+
+this.Button_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var bStatus=obj.getSelectStatus();
+	if(bStatus){
+		obj.setSelectStatus(false);
+	}
+	else{
+		obj.setSelectStatus(true);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

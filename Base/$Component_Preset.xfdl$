@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Component_Preset" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Calendar width="200" height="200" showmonthspin="true" showyearspin="true" type="monthonly" usetrailingday="true" id="Calendar00" left="117" top="127" taborder="0" weekformat="S M T W T F S"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

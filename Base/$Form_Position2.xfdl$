@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Position2" width="810" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" width="810">
+        <Button id="btn_base" taborder="0" text="Base Comp" left="9" top="8" width="160" height="70"/>
+        <Button id="btn_base00" taborder="1" text="Base Comp" left="9" top="114" width="160" height="70"/>
+        <Button id="btn_base00_00" taborder="2" text="Base Comp" left="8" top="229" width="160" height="70"/>
+        <Button id="left_base" taborder="3" text="Left Base" left="btn_base:60" top="8" width="160" height="70"/>
+        <Button id="left_base00" taborder="4" text="Left Base" left="btn_base00:60" top="114" width="160" height="70"/>
+        <Button id="left_base00_00" taborder="5" text="Left Base" left="btn_base00_00:60" top="229" width="160" height="70"/>
+        <Button id="base_btn4" taborder="6" text="Base Comp" left="9" top="370" width="379" height="49"/>
+        <Button id="target_btn" taborder="7" text="Target Comp" left="10" top="base_btn4:5" width="base_btn4:50%" height="base_btn4:50%"/>
+        <Calendar id="Calendar00" taborder="8" left="494" top="46" width="200" height="200" showmonthspin="true" showyearspin="true" type="monthonly" usetrailingday="true" weekformat="S M T W T F S"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>
